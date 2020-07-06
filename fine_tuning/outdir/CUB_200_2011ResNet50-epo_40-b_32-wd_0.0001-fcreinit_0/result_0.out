@@ -1,0 +1,4 @@
+Mon Jul  6 02:22:48 2020
+Namespace(batch_size=32, cyclic_num=2, dataset='CUB_200_2011', fc_reinit=0, lr_init=0.01, model='ResNet50', num_epoch=40, outdir='outdir', prefix=None, pretrained_model='/mnt/scratch/xiaoxiang/haozhe/icml2020_rifle/RIFLE/pretrained_models/ResNet50_pretrained', seed=None, snapshot=100, test_batch_size=100, use_cuda=0, wd_rate=0.0001)
+['loss', 'precision']
+['loss', 'precision']
