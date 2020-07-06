@@ -115,7 +115,6 @@ def main():
             values = [0.01, 0.001]
 
             step_each_epoch = np.ceil(len(reader_config.image_paths) / batch_size)
-            #print(step_each_epoch)
             optimizer = fluid.optimizer.Momentum(
                 #learning_rate=fluid.layers.piecewise_decay(boundaries=boundaries, values=values),
                 learning_rate=fluid.layers.cosine_decay(learning_rate=args.lr_init, step_each_epoch=step_each_epoch, epochs=args.num_epoch),
@@ -212,7 +211,6 @@ def main():
 
         return avg_loss.avg, avg_accuracy.avg
 
-    # test_data = reader_creator_all_in_memory('./datasets/PetImages', is_test=True)
     for e_id in range(args.num_epoch):
         train_results = train()
 
@@ -242,8 +240,6 @@ def main():
 
 
 if __name__ == '__main__':
-    # args.dataset = 'PetImages'
-    # args.pretrained_model = '/home/seven/codespace/pp_delta/pretrained_models/ResNet101_pretrained'
     print(args)
     main()
 
